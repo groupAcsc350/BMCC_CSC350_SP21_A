@@ -25,6 +25,7 @@
                            <h3 class="mb-5 text-center heading">Laundry Room Sign up</h3>
                            <h6 class="msg-info" align="center">Please choose a time slot</h6>
                            <div class="form-group">
+			   // RESERVATION TABLE
                               <div class="row justify-content-center my-3 px-3">
                                  <div class="table-responsive-sm">
                                     <table class="table table-borderless">
@@ -131,6 +132,7 @@
                            </div>
                         </div>
                      </div>
+		     // CONTACT FORM POPUP
                      <div class="bottom text-center mb-5">
                              <div class="sm-text mx-auto mb-3">
                               <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
