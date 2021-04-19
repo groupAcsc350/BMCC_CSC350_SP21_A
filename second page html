@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Laundry Room Sign Up</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <body>
+         <script src="script.js"></script>
+         <div class="container px-4 py-5 mx-auto">
+            <div class="card card0">
+               <div class="d-flex flex-lg-row flex-column-reverse">
+                  <div class="card card1">
+                     <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                           <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://i.ibb.co/6WndSY1/Pin-Clipart-com-machines-clipart-739756.png" class="img-responsive"> </div>
+                           <h3 class="mb-5 text-center heading">Laundry Room Sign up</h3>
+                           <h6 class="msg-info" align="center">Please choose a time slot</h6>
+                           <div class="form-group">
+                              <div class="row justify-content-center my-3 px-3">
+                                 <div class="table-responsive-sm">
+                                    <table class="table table-borderless">
+                                       <tbody>
+                                          <tr>
+                                             <th>Date</th>
+                                             <th>
+                                                <p id="mon"></p>
+                                             </th>
+                                             <th>
+                                                <p id="tue"></p>
+                                             </th>
+                                             <th>
+                                                <p id="wed"></p>
+                                             </th>
+                                             <th>
+                                                <p id="thurs"></p>
+                                             </th>
+                                             <th>
+                                                <p id="fri"></p>
+                                             </th>
+                                             <th>
+                                                <p id="sat"></p>
+                                             </th>
+                                             <th>
+                                                <p id="sun"></p>
+                                             </th>
+                                          </tr>
+                                          <tr>
+                                             <td>12AM</td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          </tr>
+                                          <tr>
+                                             <td>3AM</td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          </tr>
+                                          <tr>
+                                             <td >6AM</<td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          </tr>
+                                          <tr>
+                                             <td>9AM</<td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          </tr>
+                                          <tr>
+                                             <td>12PM</td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          </tr>
+                                          <tr>
+                                             <td>3PM</td>
+                                            <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          <tr>
+                                             <td>9PM</td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+                                             <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+											 <td><a class="linkss" href="#">Reserve</a></td>
+                                          </tr>
+                                    </table>
+                                    </tbody>
+                                 </div>
+                              </div>
+                              <script src="script.js"></script>
+                              <form action="action_page.php" method="post" class="form">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bottom text-center mb-5">
+                        <div class="bs-example">
+                           <div class="sm-text mx-auto mb-3">
+                              <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                 <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                       <div class="modal-header text-center">
+                                          <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                       </div>
+                                       <div class="modal-body mx-3">
+                                          <div class="md-form mb-5">
+                                             <i class="fas fa-user prefix grey-text"></i>
+                                             <input type="text" id="form34" class="form-control validate">
+                                             <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                                          </div>
+                                          <div class="md-form mb-5">
+                                             <i class="fas fa-envelope prefix grey-text"></i>
+                                             <input type="email" id="form29" class="form-control validate">
+                                             <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                                          </div>
+                                          <div class="md-form">
+                                             <i class="fas fa-pencil prefix grey-text"></i>
+                                             <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                                             <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                                          </div>
+                                       </div>
+                                       <div class="modal-footer d-flex justify-content-center">
+                                          <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="text-center">
+                                 Need help? <a href="" class="btn btn-dark" data-toggle="modal" data-target="#modalContactForm">Contact us.</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card card2">
+                     <div class="my-auto mx-md-5 px-md-5 right">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </body>
+</html>
