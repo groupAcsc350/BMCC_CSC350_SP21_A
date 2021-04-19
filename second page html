@@ -30,7 +30,7 @@
                                     <table class="table table-borderless">
                                        <tbody>
                                           <tr>
-                                             <th>Date</th>
+                                             <th></th>
                                              <th>
                                                 <p id="mon"></p>
                                              </th>
