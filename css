@@ -47,12 +47,12 @@ button:focus {
 }
 
 .card1 {
-    width: 70%;
+    width: 58%;
     padding: 40px 30px 10px 30px
 }
 
 .card2 {
-    width: 30%;
+    width: 42%;
     background-image: url("https://i.ibb.co/d4C6rfC/florian-olivo-Pvs1hf-Zrxw-A-unsplash.jpg");
     background-repeat:no-repeat;
     background-size:cover;
