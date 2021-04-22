@@ -1,173 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+
 body {
-    color: #000;
-    overflow-x: hidden;
-    height: 100%;
-    font-family: Open Sans;
-    background: rgb(70,149,144);
-background: linear-gradient(0deg, rgba(70,149,144,1) 0%, rgba(85,179,115,1) 100%) fixed; 
+ background: linear-gradient(
+    to right, 
+    grey 0%, 
+    grey 50%, 
+    lightgrey 50%, 
+    lightgrey 100%);
+font-family: 'Open Sans', sans-serif;
+
 }
-
-input,
-textarea {
-    background-color:rgba(70,149,144,1);
-    border-radius: 50px !important;
-    padding: 12px 15px 12px 15px !important;
-    width: 100%;
-    box-sizing: border-box;
-    border: none !important;
-    border: 1px solid rgba(70,149,144,1) !important;
-    font-size: 16px !important;
-    color: #000 !important;
-    font-weight: 400
-    
-}
-
-input:focus,
-textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid rgba(70,149,144,1) !important;
-    outline-width: 0;
-    font-weight: 400
-}
-
-button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline-width: 0
-}
-
-
-.card {
-    border-radius: 0;
-    border: none;
+.box {
+ background: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+    width:800px;
+    margin: 0 auto;
+  border-radius: 3px;
+  height: 70vh; 
+position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 
 }
 
-.card1 {
-    width: 58%;
-    padding: 40px 30px 10px 30px
+.box2 {
+ background: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+    width:800px;
+    margin: 0 auto;
+  border-radius: 3px;
+  height: 55vh; 
+position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
 }
 
-.card2 {
-    width: 42%;
-    background-image: url("https://i.ibb.co/d4C6rfC/florian-olivo-Pvs1hf-Zrxw-A-unsplash.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-	
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+  table-layout: fixed;
+  width: 700px;  
+  height: 400px;
+  font-weight: bold;
+  color: black;
+  
 }
 
+table a {
+  text-decoration: none;
+  color:#525252;
+  
 
-#logo {
-    width: 70px;
-    height: 80px
-}
-
-.heading {
-    margin-bottom: 60px !important
-}
-
-::placeholder {
-    color: #000 !important;
-    opacity: 1
-}
-
-:-ms-input-placeholder {
-    color: #000 !important
-}
-
-::-ms-input-placeholder {
-    color: #000 !important
-}
-
-.form-control-label {
-    font-size: 12px;
-    margin-left: 15px
-}
-
-.msg-info {
-    padding-left: 15px;
-    margin-bottom: 30px
-}
-
-.btn-color {
-    border-radius: 50px;
-    color: #fff;
-    background-image: linear-gradient(to bottom, black, grey);
-    padding: 15px;
-    cursor: pointer;
-    text-align: center;
-    border: none !important;
-
-    margin-top: 40px
-}
-
-.btn-color:hover {
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-}
-
-
-a {
-    color: #000
-}
-
-a:hover {
-    color: #000
-}
-
-.bottom {
-    width: 100%;
-    margin-top: -79x !important
-}
-
-.sm-text {
-    font-size: 15px
-}
-
-@media screen and (max-width: 997px) {
-    .card1 {
-        width: 100%;
-        padding: 40px 30px 10px 30px
-    }
-
-    .card2 {
-        width: 100%
-    }
-
-    .right {
-        margin-top: 100px !important;
-        margin-bottom: 100px !important
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 10px !important
-    }
-
-    .card2 {
-        padding: 50px
-    }
-
-    .right {
-        margin-top: 50px !important;
-        margin-bottom: 50px !important
-    }
-}
-
-
-a.linkss {
- color: rgba(70,149,144,1) !important;
 }
 
 a.linkss:hover {
  transition: all .2s ease-in-out;
- color: black !important;
+ color: white !important;
  text-decoration: none;
  border-radius: 10px;
- background-color: lightgrey;
+
+  background: black;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .box { 
+  width:600px;
+  height: 550px;
+  }
+
+  table.center {
+    margin-right: 50px;
+  width: 450px;  
+  height: 350px;
+  display: block
+  }
+
+  .box2 {
+     width:400px;
+  height: 600px;
+  }
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  background:black;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.username{
+  background:white;
+  border: #ccc 1px solid;
+  border-bottom: #ccc 2px solid;
+  padding: 8px;
+  width:300px;
+  margin-top:10px;
+  font-size:1em;
+  border-radius:10px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.password{
+  border-radius:10px;
+  background:white;
+  border: #ccc 1px solid;
+  padding: 8px;
+  width:300px;
+  font-size:1em;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.button{
+  background:black;
+  width:125px;
+  padding-top:8px;
+  padding-bottom:8px;
+  color:white;
+  border-radius:10px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+
+}
+
+.button:hover{
+  background:grey; 
+}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+   margin: 0 auto;
+   text-align: center;
+   transform: translate(50%, -10%);
+
+}
+
+input[type=email], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  transform: translate(50%, 15%);
+   margin: 0 auto;
+   text-align: center;
+
+}
+
+input[type=submit] {
+  background:black;
+  width:125px;
+  padding-top:8px;
+  padding-bottom:8px;
+  color:white;
+  border-radius:10px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -50%);
+}
+
+input[type=submit]:hover {
+  background-color: grey;
+  cursor: pointer;
 }
