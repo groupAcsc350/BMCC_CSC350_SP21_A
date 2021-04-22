@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +26,7 @@
 
     </select>
 
-    <label for="subject"><p>Subject</p></label>
+    <label for="subject"><p style="background:white; color: black;">Subject</p></label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
 
     <input type="submit" value="Submit">
