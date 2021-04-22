@@ -97,30 +97,6 @@ a.linkss:hover {
   }
 }
 
-/* @media only screen and (min-width: 1000px) {
-
-  .box { 
-  width:600px;
-  height: 550px;
-  }
-  
-
-  table.center {
-    margin-right: 50px;
-  width: 450px;  
-  height: 350px;
-  display: block
-  }
-
-  .box2 {
-     width:900px;
-  height: 600px;
-  }
-} */
-
-
-
-
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
