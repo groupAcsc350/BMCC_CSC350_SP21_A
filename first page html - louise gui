@@ -17,13 +17,13 @@
       <form action="action_page.php" method="post">
      <label for="username"><br></br></label>
     <input class="username" type="ext" placeholder="Apartment number" name="username" required>
-
     <label for="password"><br></br></label>
     <input class="password" type="password" placeholder="Password" name="password" required>
-
-    <input  class="button"   type="submit" value="Login"></a>
-  
-  </div></div></form>
-    </div>
+    <input  class="button"   type="submit" value="Login">
+	
+  </div>
+  </form>
   </body>
 </html>
+
+
