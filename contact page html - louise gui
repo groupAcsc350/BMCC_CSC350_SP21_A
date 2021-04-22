@@ -21,10 +21,6 @@
 
     <label for="email"></label>
     <input type="email" id="email" name="email" placeholder="Email">
-  
-
-
-    </select>
 
     <label for="subject"><p style="background:white; color: black;">Subject</p></label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
