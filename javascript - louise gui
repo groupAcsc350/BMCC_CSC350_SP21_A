@@ -23,3 +23,15 @@ document.getElementById("sat").innerHTML = saturday.toDateString()
 document.getElementById("sun").innerHTML = sunday.toDateString()
 
 
+function myFunction() {
+  var x = document.forms["contact"]["fullName"].value;
+  var y = document.forms["contact"]["email"].value;
+  var z = document.forms["contact"]["subject"].value;
+  if (x == "" || x == null || y == "" || y == null ||z == "" || z == null ) {
+    alert("All fields must be filled out.");
+    return false;
+  }
+  else	 
+alert("Thanks for the message! We will get back to you in the next 48 hours. If urgent call (000) 000-0000.");
+return true;
+}
