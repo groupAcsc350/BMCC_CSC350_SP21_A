@@ -1,0 +1,40 @@
+CREATE DATABASE login;
+
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(3) NOT NULL UNIQUE,
+    password VARCHAR(3) NOT NULL 
+);
+
+select * from users;
+
+
+insert into users value (1,'1A', '1a');
+insert into users value (2,'1B', '1b');
+insert into users value (3,'2A', '2a');
+insert into users value (4,'2B', '2b');
+insert into users value (5,'3A', '3a');
+insert into users value (6,'3B', '3b');
+insert into users value (7,'4A', '4a');
+insert into users value (8,'4B', '4b');
+insert into users value (9,'5A', '5a');
+insert into users value (10,'5B', '5b');
+insert into users value (11,'6A', '6a');
+insert into users value (12,'6B', '6b');
+insert into users value (13,'7A', '7a');
+insert into users value (14,'7B', '7b');
+insert into users value (15,'8A', '8a');
+insert into users value (16,'8B', '8b');
+insert into users value (17,'9A', '9a');
+insert into users value (18,'9B', '9b');
+insert into users value (19,'10A', '10a');
+insert into users value (20,'10B', '10b');
+insert into users value (21,'11A', '11a');
+insert into users value (22,'11B', '11b');
+insert into users value (23,'12A', '12a');
+insert into users value (24,'12B', '12a');
+insert into users value (25,'13A', '13a');
+
+
+
+
