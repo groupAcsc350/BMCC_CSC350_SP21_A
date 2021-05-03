@@ -1,7 +1,5 @@
 
 
-
-<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -11,7 +9,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    
+
 
     <div class="box2">
       <h1> <img src="https://i.ibb.co/6WndSY1/Pin-Clipart-com-machines-clipart-739756.png" height="60px" width="50px"><br></br> Laundry Room Sign up </h1>
@@ -102,7 +100,9 @@
    <script src="script.js"></script>
 
    <p style="background:grey" >Dark grey means available slot. </p> <p style="background:lightgrey;  color:black">Light grey means unavailable slot.</p>
-   <p style="background:white; color: black;"> Need help? <a style="text-decoration: none; color: white; background: black; border-radius: 10px;" href="file:///C:/Users/louis_2ofwt8m/Downloads/THIRD.HTML">Contact us.</p></a>
+   <p style="background:white; color: black;"> Need help? <a style="text-decoration: none; color: white; background: black; border-radius: 10px;" target="_blank" href="contact.php">Contact us.</p></a>
     </div>
+	
+
   </body>
 </html>
