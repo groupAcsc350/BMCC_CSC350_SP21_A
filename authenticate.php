@@ -7,7 +7,7 @@ $pass = isset($_POST["password"]) ? $_POST["password"] : '';
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = 'root';
-$DATABASE_NAME = 'login';
+$DATABASE_NAME = 'laundry';
 
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -19,7 +19,7 @@ if(! $con)
     die('Internal server error');
 }
  
-$db_select = mysqli_select_db($con, "login");
+$db_select = mysqli_select_db($con, "laundry");
 if (!$con) {
     error_log("Database selection failed: " . mysqli_error($con));
     die('Internal server error');
