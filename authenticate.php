@@ -1,7 +1,8 @@
 
 <?php
-$user = $_POST["username"];
-$pass = $_POST["password"];
+$user = isset($_POST["username"]) ? $_POST["username"] : '';
+$pass = isset($_POST["password"]) ? $_POST["password"] : '';
+
  
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -14,13 +15,13 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 
 if(! $con)
 {
-     error_log("Failed to connect to MySQL: " . mysqli_error($connection));
+     error_log("Failed to connect to MySQL: " . mysqli_error($con));
     die('Internal server error');
 }
  
 $db_select = mysqli_select_db($con, "login");
 if (!$con) {
-    error_log("Database selection failed: " . mysqli_error($connection));
+    error_log("Database selection failed: " . mysqli_error($con));
     die('Internal server error');
 }
 
