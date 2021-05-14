@@ -9,8 +9,6 @@ include "login.php";
 {
 	 $time = isset($_POST["time"]) ? $_POST["time"] : '';
 	 $uname = isset($_POST["username"]) ? $_POST["username"] : '';
-// if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
-	if($row["username"]==$user && $row["password"]==$pass){
 $sql = "INSERT INTO reservations (username,day, slot) VALUES ('".$uname."','BOOKED', '".$time."')";
 if(mysqli_query($con, $sql)){
     echo "Records inserted successfully.";
