@@ -1,0 +1,8 @@
+
+CREATE TABLE reservations (
+  id int(11) NOT NULL AUTO_INCREMENT,
+username VARCHAR(3) NOT NULL UNIQUE ,
+day varchar(10) DEFAULT NULL,
+slot varchar(10) DEFAULT NULL,
+ PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
