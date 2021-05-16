@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -18,225 +17,233 @@
 	   <label for="time"> </label>
 <select  name="slot" id="slot">
   <optgroup label="<?php
-  $timestamp = strtotime('last Sunday');
+$timestamp = strtotime('last Sunday');
 $days = array();
 
-for ($i = 0; $i < 1; $i++) {
-	
+for ($i = 0;$i < 1;$i++)
+{
+
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
 
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
 ?> ">
 <option disabled="disabled" selected="selected"  value="">CHOOSE A TIME BELOW</option>
-    <?php 
-while($tNow <= $tEnd){ ?>
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
 
    <b>
-   <option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?> </b>
+   <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?> </b>
    
 
     <?php
-  $tNow = strtotime('+3 hours',$tNow); 
-}
-	echo '<br/>';
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
 ?></option>
 
   </optgroup>
   <optgroup label="<?php
 
+for ($i = 1;$i < 2;$i++)
+{
 
-for ($i = 1; $i < 2; $i++) {
-	
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
 
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
 ?> ">
-    <?php 
-while($tNow <= $tEnd){ ?>
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
 
-   <b> <option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?> </b>
+   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?> </b>
    
 
     <?php
-  $tNow = strtotime('+3 hours',$tNow); 
-}
-	echo '<br/>';
-}
-?></option>
-  </optgroup>
-  
-  <optgroup label="<?php
-
-
-for ($i = 2; $i < 3; $i++) {
-	
-    $days[] = strftime('%A', $timestamp);
-    $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
-
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
-?> ">
-    <?php 
-while($tNow <= $tEnd){ ?>
-
-   <b> <option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?>  </b>
-   
-
-    <?php
-  $tNow = strtotime('+3 hours',$tNow); 
-}
-	echo '<br/>';
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
 ?></option>
   </optgroup>
   
   <optgroup label="<?php
 
+for ($i = 2;$i < 3;$i++)
+{
 
-for ($i = 3; $i < 4; $i++) {
-	
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
 
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
 ?> ">
-    <?php 
-while($tNow <= $tEnd){ ?>
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
 
-   <b> <option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?>  </b>
+   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
    
 
     <?php
-  $tNow = strtotime('+3 hours',$tNow); 
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
-	echo '<br/>';
+?></option>
+  </optgroup>
+  
+  <optgroup label="<?php
+
+for ($i = 3;$i < 4;$i++)
+{
+
+    $days[] = strftime('%A', $timestamp);
+    $timestamp = strtotime('+1 day', $timestamp);
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
+
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
+?> ">
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
+
+   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
+   
+
+    <?php
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
 ?></option>
   </optgroup>
   <optgroup label="<?php
 
+for ($i = 4;$i < 5;$i++)
+{
 
-for ($i = 4; $i < 5; $i++) {
-	
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
 
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
 ?> ">
-    <?php 
-while($tNow <= $tEnd){ ?>
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
 
-   <b><option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?>  </b>
+   <b><option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
    
 
     <?php
-  $tNow = strtotime('+3 hours',$tNow); 
-}
-	echo '<br/>';
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
 ?></option>
   </optgroup>
   <optgroup label="<?php
 
+for ($i = 5;$i < 6;$i++)
+{
 
-for ($i = 5; $i < 6; $i++) {
-	
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
 
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
 ?> ">
-    <?php 
-while($tNow <= $tEnd){ ?>
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
 
-   <b><option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?>  </b>
+   <b><option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
    
 
     <?php
-  $tNow = strtotime('+3 hours',$tNow); 
-}
-	echo '<br/>';
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
 ?></option>
   </optgroup>
   <optgroup label="<?php
 
+for ($i = 6;$i < 7;$i++)
+{
 
-for ($i = 6; $i < 7; $i++) {
-	
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    echo date("D",$timestamp) . " ";
-    echo date("d",$timestamp)." "; 
-	$save = date("D",$timestamp);
-	
-   $start = "00:00";
-   $end = "22:00";
+    echo date("D", $timestamp) . " ";
+    echo date("d", $timestamp) . " ";
+    $save = date("D", $timestamp);
 
-   $tStart = strtotime($start);
-   $tEnd = strtotime($end);
-   $tNow = $tStart;
+    $start = "00:00";
+    $end = "22:00";
+
+    $tStart = strtotime($start);
+    $tEnd = strtotime($end);
+    $tNow = $tStart;
 ?> ">
-    <?php 
-while($tNow <= $tEnd){ ?>
+    <?php
+    while ($tNow <= $tEnd)
+    { ?>
 
-   <b> <option value="<?php  echo $save . " " . date("h:i A",$tNow); ?>"> <?php echo $save . " ". date("h:i A",$tNow) ; ?> </b>
+   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?> </b>
    
 
     <?php
-  $tNow = strtotime('+3 hours',$tNow); 
-}
-	echo '<br/>';
+        $tNow = strtotime('+3 hours', $tNow);
+    }
+    echo '<br/>';
 }
 ?></option>
   </optgroup>
