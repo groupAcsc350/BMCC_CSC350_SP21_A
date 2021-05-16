@@ -12,7 +12,7 @@
     <div class="box2">
       <h1> <img src="https://i.ibb.co/6WndSY1/Pin-Clipart-com-machines-clipart-739756.png" height="60px" width="50px"><br></br> Laundry Room Sign up </h1>
       <p> You have succesfully logged in.</p></h1>
-      <form action="reservation2.php" method="POST" onsubmit="return confirm('Are you sure you want to submit this reservation?');">
+      <form action="reserve.php" method="POST" onsubmit="return confirm('Are you sure you want to submit this reservation?');">
 	  
 	   <label for="time"> </label>
 <select  name="slot" id="slot">
