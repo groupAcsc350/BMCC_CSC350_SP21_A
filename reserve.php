@@ -56,7 +56,6 @@ if ($_SESSION["username"])
 
 ?>
 
-
 	
 </body>
 </html>
