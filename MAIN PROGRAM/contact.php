@@ -12,7 +12,6 @@
 
   
   <?php
-
 $fullName = $email = $subject ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,7 +46,7 @@ function test_input($data) {
 ?>
     
 
-    <div class="box2">
+    <div class="box">
       <h1> <img src="https://i.ibb.co/6WndSY1/Pin-Clipart-com-machines-clipart-739756.png" height="60px" width="50px"><br></br> Laundry Room Sign up </h1>
       <p> Need help? Feel free to contant management.</p>
   
