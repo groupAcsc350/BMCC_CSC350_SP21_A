@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -10,7 +9,7 @@
   <body>
     
 
-    <div class="box2">
+    <div class="box">
       <h1> <img src="https://i.ibb.co/6WndSY1/Pin-Clipart-com-machines-clipart-739756.png" height="60px" width="50px"><br></br> Laundry Room Sign up </h1>
       <p> Please enter your apartment number and password assigned</p>
       <h2>Sign in</h2>
@@ -22,17 +21,9 @@
     <input class="password" type="password" placeholder="Password" name="password" id="password" required="required">
 
     <input  class="button"   type="submit" value="Login"></a>
-	<?php
-                    if(isset($_SESSION["error"])){
-                        $error = $_SESSION["error"];
-                        echo "<span>$error</span>";
-                    }
-                ?>  
 	
   
   </div></div></form>
     </div>
   </body>
 </html>
-
-
