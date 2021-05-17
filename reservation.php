@@ -15,6 +15,10 @@
       <form action="reserve.php" method="POST" onsubmit="return confirm('Are you sure you want to submit this reservation?');">
 	  
 	   <label for="time"> </label>
+	   <?php
+$con = mysqli_connect('localhost', 'root', 'root', 'laundry') or die('Unable To connect');
+
+?>
 <select  name="slot" id="slot">
   <optgroup label="<?php
 $timestamp = strtotime('last Sunday');
@@ -22,12 +26,12 @@ $days = array();
 
 for ($i = 0;$i < 1;$i++)
 {
-
+    $today_date = strftime(date("D d F"));
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
+    $before_or_after_date = strftime(date("D d F", $timestamp));
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -35,26 +39,48 @@ for ($i = 0;$i < 1;$i++)
     $tStart = strtotime($start);
     $tEnd = strtotime($end);
     $tNow = $tStart;
+
 ?> ">
 <option disabled="disabled" selected="selected"  value="">CHOOSE A TIME BELOW</option>
     <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
+
+    }
+
     while ($tNow <= $tEnd)
-    { ?>
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
 
    <b>
-   <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?> </b>
    
-
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
     <?php
+        }
         $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
     }
-    echo '<br/>';
+
 }
-?></option>
+?>
+
+
+
+</option>
 
   </optgroup>
   <optgroup label="<?php
-
 for ($i = 1;$i < 2;$i++)
 {
 
@@ -62,7 +88,6 @@ for ($i = 1;$i < 2;$i++)
     $timestamp = strtotime('+1 day', $timestamp);
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -71,23 +96,40 @@ for ($i = 1;$i < 2;$i++)
     $tEnd = strtotime($end);
     $tNow = $tStart;
 ?> ">
-    <?php
-    while ($tNow <= $tEnd)
-    { ?>
+   <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
 
-   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?> </b>
-   
-
-    <?php
-        $tNow = strtotime('+3 hours', $tNow);
     }
-    echo '<br/>';
+
+    while ($tNow <= $tEnd)
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
+
+   <b>
+   
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
+    <?php
+        }
+        $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
+    }
 }
 ?></option>
   </optgroup>
   
   <optgroup label="<?php
-
 for ($i = 2;$i < 3;$i++)
 {
 
@@ -95,7 +137,6 @@ for ($i = 2;$i < 3;$i++)
     $timestamp = strtotime('+1 day', $timestamp);
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -104,23 +145,40 @@ for ($i = 2;$i < 3;$i++)
     $tEnd = strtotime($end);
     $tNow = $tStart;
 ?> ">
-    <?php
-    while ($tNow <= $tEnd)
-    { ?>
+      <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
 
-   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
-   
-
-    <?php
-        $tNow = strtotime('+3 hours', $tNow);
     }
-    echo '<br/>';
+
+    while ($tNow <= $tEnd)
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
+
+   <b>
+   
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
+    <?php
+        }
+        $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
+    }
 }
 ?></option>
   </optgroup>
   
   <optgroup label="<?php
-
 for ($i = 3;$i < 4;$i++)
 {
 
@@ -128,7 +186,7 @@ for ($i = 3;$i < 4;$i++)
     $timestamp = strtotime('+1 day', $timestamp);
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
+    $date = date("D F Y", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -137,22 +195,39 @@ for ($i = 3;$i < 4;$i++)
     $tEnd = strtotime($end);
     $tNow = $tStart;
 ?> ">
-    <?php
-    while ($tNow <= $tEnd)
-    { ?>
+      <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
 
-   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
-   
-
-    <?php
-        $tNow = strtotime('+3 hours', $tNow);
     }
-    echo '<br/>';
+
+    while ($tNow <= $tEnd)
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
+
+   <b>
+   
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
+    <?php
+        }
+        $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
+    }
 }
 ?></option>
   </optgroup>
   <optgroup label="<?php
-
 for ($i = 4;$i < 5;$i++)
 {
 
@@ -160,7 +235,7 @@ for ($i = 4;$i < 5;$i++)
     $timestamp = strtotime('+1 day', $timestamp);
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
+    $date = date("D F Y", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -169,22 +244,39 @@ for ($i = 4;$i < 5;$i++)
     $tEnd = strtotime($end);
     $tNow = $tStart;
 ?> ">
-    <?php
-    while ($tNow <= $tEnd)
-    { ?>
+      <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
 
-   <b><option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
-   
-
-    <?php
-        $tNow = strtotime('+3 hours', $tNow);
     }
-    echo '<br/>';
+
+    while ($tNow <= $tEnd)
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
+
+   <b>
+   
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
+    <?php
+        }
+        $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
+    }
 }
 ?></option>
   </optgroup>
   <optgroup label="<?php
-
 for ($i = 5;$i < 6;$i++)
 {
 
@@ -192,7 +284,7 @@ for ($i = 5;$i < 6;$i++)
     $timestamp = strtotime('+1 day', $timestamp);
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
+    $date = date("D F Y", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -201,30 +293,47 @@ for ($i = 5;$i < 6;$i++)
     $tEnd = strtotime($end);
     $tNow = $tStart;
 ?> ">
-    <?php
-    while ($tNow <= $tEnd)
-    { ?>
+      <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
 
-   <b><option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?>  </b>
-   
-
-    <?php
-        $tNow = strtotime('+3 hours', $tNow);
     }
-    echo '<br/>';
+
+    while ($tNow <= $tEnd)
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
+
+   <b>
+   
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
+    <?php
+        }
+        $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
+    }
 }
 ?></option>
   </optgroup>
   <optgroup label="<?php
-
 for ($i = 6;$i < 7;$i++)
 {
-
+    $today_date = date("D d F");
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
+    $before_or_after_date = date("D d F", $timestamp);
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
-    $save = date("D", $timestamp);
 
     $start = "00:00";
     $end = "22:00";
@@ -233,17 +342,35 @@ for ($i = 6;$i < 7;$i++)
     $tEnd = strtotime($end);
     $tNow = $tStart;
 ?> ">
-    <?php
-    while ($tNow <= $tEnd)
-    { ?>
+      <?php
+    $sql = mysqli_query($con, "SELECT slot FROM reservations");
+    $reservations_in_db = array();
+    while ($row = mysqli_fetch_array($sql))
+    {
+        $reservations_in_db[] = $row['slot'];
 
-   <b> <option value="<?php echo $save . " " . date("h:i A", $tNow); ?>"> <?php echo $save . " " . date("h:i A", $tNow); ?> </b>
-   
-
-    <?php
-        $tNow = strtotime('+3 hours', $tNow);
     }
-    echo '<br/>';
+
+    while ($tNow <= $tEnd)
+    {
+        $date_available = date("d F Y", $timestamp) . date(" h:i A", $tNow);
+
+        if (!in_array($date_available, $reservations_in_db, true))
+        {
+?>
+
+   <b>
+   
+   <option  value="<?php echo $date_available; ?>"> <?php echo $date_available; ?> </b>
+   
+   
+	
+    <?php
+        }
+        $tNow = strtotime('+3 hours', $tNow);
+
+        echo '<br/>';
+    }
 }
 ?></option>
   </optgroup>
@@ -257,7 +384,8 @@ for ($i = 6;$i < 7;$i++)
    <script src="script.js"></script>
 <br></br>
  
-   <p style="background:white; color: black;"> Need help? <a style="text-decoration: none; color: white; background: black; border-radius: 10px;" target="_blank" href="contact.php">Contact us.</p></a>
+   <p style="background:white; font-size: 15px; color: black;"> Need help? <a style="text-decoration: none; font-size: 15px; color: white; background: black; border-radius: 10px;" target="_blank" href="contact.php">Contact us.</a> <br></br> <a style="text-decoration: none; color: white; font-size: 15px; background: grey; border-radius: 10px;" href="logout.php">Logout</a></p>
+   
     </div>
 	
 
