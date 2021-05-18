@@ -17,21 +17,20 @@ if ($_SESSION["username"])
 <?php
 
     $con = mysqli_connect('localhost', 'root', 'root', 'laundry') or die('Unable To connect');
-    $test = $_SESSION["username"];
+    $username = $_SESSION["username"];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $slot = isset($_POST["slot"]) ? $_POST["slot"] : '';
 
-        // $result = mysqli_query($con,"SELECT username FROM reservations WHERE username = '".$test."'");
-        $result2 = mysqli_query($con, "SELECT slot FROM reservations WHERE username =  '" . $test . "'");
+        $result2 = mysqli_query($con, "SELECT slot FROM reservations WHERE username =  '" . username . "'");
 
         $row = mysqli_fetch_assoc($result2);
         $selected_slot = "You already have a reservation: " . $row['slot'] . " Would you like to cancel this reservation? Click 'OK' to cancel or 'Cancel' to keep your reservation.";
 
         if (mysqli_num_rows($result2) == 0)
         {
-            $sql = "INSERT INTO reservations (username, slot) VALUES ('" . $test . "', '" . $slot . "')";
+            $sql = "INSERT INTO reservations (username, slot) VALUES ('" . $username . "', '" . $slot . "')";
 
         }
         else
