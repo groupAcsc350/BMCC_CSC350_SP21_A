@@ -5,8 +5,6 @@ CREATE TABLE users (
     password VARCHAR(3) NOT NULL 
 );
 
-select * from users;
-
 
 insert into users value (1,'1A', '1a');
 insert into users value (2,'1B', '1b');
