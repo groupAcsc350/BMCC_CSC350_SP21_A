@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
   <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
 <meta name="HandheldFriendly" content="true">
     <title>laundry Room Sign up</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -27,9 +29,10 @@ $days = array();
 for ($i = 0;$i < 1;$i++)
 {
     $today_date = strftime(date("D d F"));
+	$before_or_after_date = strftime(date("D d F", $timestamp));
     $days[] = strftime('%A', $timestamp);
     $timestamp = strtotime('+1 day', $timestamp);
-    $before_or_after_date = strftime(date("D d F", $timestamp));
+    
     echo date("D", $timestamp) . " ";
     echo date("d", $timestamp) . " ";
 
