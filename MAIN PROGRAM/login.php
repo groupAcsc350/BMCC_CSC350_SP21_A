@@ -21,10 +21,9 @@
     <label for="password"><br></br></label>
     <input class="password" type="password" placeholder="Password" name="password" id="password" required="required">
 
-    <input  class="button"   type="submit" value="Login"></a><br></br>
+    <input  class="button"   type="submit" value="Login"></a>
 
 	
-	 <p style="background:white; font-size: 15px; color: black;">Forgot your username or password? Click <a style="text-decoration: none; font-size: 15px; color: white; background: black; border-radius: 10px;" target="_blank" href="credentials.html">here.</a> <br></br></p>
    
 	
   
