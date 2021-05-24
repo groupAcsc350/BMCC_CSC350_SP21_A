@@ -1,3 +1,4 @@
+create database laundry;
 
 CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -31,6 +32,14 @@ insert into users value (22,'11B', '11b');
 insert into users value (23,'12A', '12a');
 insert into users value (24,'12B', '12a');
 insert into users value (25,'13A', '13a');
+
+
+CREATE TABLE reservations (
+  id int(11) NOT NULL AUTO_INCREMENT,
+username VARCHAR(3) NOT NULL UNIQUE,
+slot  VARCHAR(40) NOT NULL UNIQUE,
+ PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 
