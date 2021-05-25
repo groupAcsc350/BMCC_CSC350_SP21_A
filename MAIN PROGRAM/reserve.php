@@ -28,7 +28,7 @@ if ($_SESSION["username"])
         $result2 = mysqli_query($con, "SELECT slot FROM reservations WHERE username =  '" . $test . "'");
 
         $row = mysqli_fetch_assoc($result2);
-        $selected_slot = "You already have a reservation: " . $row['slot'] . " Would you like to cancel this reservation? Click 'OK' to cancel or 'Cancel' to keep your reservation.";
+        // $selected_slot = "You already have a reservation: " . $row['slot'] . " Would you like to cancel this reservation? Click 'OK' to cancel or 'Cancel' to keep your reservation.";
 
         if (mysqli_num_rows($result2) == 0)
         {
@@ -37,6 +37,8 @@ if ($_SESSION["username"])
         }
         else
         {
+			        $selected_slot = "You already have a reservation: " . $row['slot'] . " Would you like to cancel this reservation? Click 'OK' to cancel or 'Cancel' to keep your reservation.";
+
             echo '<script type="text/javascript">confirm( "' . $selected_slot . '");window.location=\'cancelreservation.php\';</script>';
 
         }
